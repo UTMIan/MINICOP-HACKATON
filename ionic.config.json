@@ -1,0 +1,7 @@
+{
+  "name": "minicop-Hackaton",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
