@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button default-href="#" routerLink="/home"  color="danger"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inicio de sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item fill="solid">
+    <ion-label position="floating"  color="danger">Email</ion-label>
+    <ion-input type="email" ngModel email  color="danger"></ion-input>
+    <ion-note slot="helper">Ingresa un email valido</ion-note>
+    <ion-note slot="error"  color="danger">Email invalido</ion-note>
+  </ion-item>
+  <ion-item fill="solid">
+    <ion-label position="floating"  color="danger">Contraseña</ion-label>
+    <ion-input type="email" ngModel email  color="danger"></ion-input>
+    <ion-note slot="helper">Ingresa una contraseña valida</ion-note>
+    <ion-note slot="error"  color="danger">Contraseña invalida</ion-note>
+  </ion-item>
+<br>
+  <ion-button color="danger">
+    Iniciar
+  </ion-button>
+</ion-content>
+
