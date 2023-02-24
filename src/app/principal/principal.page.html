@@ -1,4 +1,5 @@
 
+
 <ion-header>
 <ion-toolbar>
   <ion-buttons slot="start">
@@ -6,16 +7,22 @@
   </ion-buttons>
  <strong><ion-title color="danger">Minicop App</ion-title></strong> 
 </ion-toolbar>
+<ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
+
 </ion-header>
+
+
+<!--Barra desplegable-->
+
 <ion-content class="ion-padding" align="center">
 
   <ion-menu contentId="main-content">
     <ion-header>
       <ion-toolbar color="danger">
-        <ion-title>Acciones Rapidas</ion-title>
+        <ion-title id="identifier">Acciones</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
+    <ion-content >
       <ion-item routerLink="/mensajes">
         <ion-label color="danger">Mensajes</ion-label><ion-icon name="mail-outline" color="danger"></ion-icon>
       </ion-item>
@@ -25,16 +32,17 @@
       <ion-item routerLink="/contactos">
         <ion-label color="danger">Contactos</ion-label><ion-icon name="people-circle-outline" color="danger"></ion-icon>
       </ion-item>
-      <ion-content class="ion-padding">
+    
         <ion-menu-toggle>
           <ion-button color="danger">Cerrar</ion-button>
         </ion-menu-toggle>
-      </ion-content>
+     
     </ion-content>
   </ion-menu>
 
+  
   <div class="ion-page" id="main-content">
- 
+   
   </div>
 
   <p>
@@ -46,20 +54,26 @@
       <ion-img src="assets/Button2.png" style="height: auto; max-width: 25vh;"></ion-img>
     </div>
  
+    
+  <!-- <p>Buenas Tardes</p>
+  <div align="center">
+    <ion-img src="https://cdn-icons-png.flaticon.com/512/1146/1146856.png" style="height: auto; max-width: 15vh;"></ion-img>
+  </div> -->
 
   <ion-tabs>
     <ion-router-outlet></ion-router-outlet>
   
-    <ion-tab-bar slot="bottom"  color="danger">
-      <ion-tab-button tab="home"  color="danger" routerLink="/principal">
-        <ion-icon name="bag-add-outline"></ion-icon>
-        Emergencia
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" routerLink="/principal">
+        <ion-icon name="bag-add-outline" color="danger"></ion-icon>
+        <ion-text color="danger"> Emergencia</ion-text>
       </ion-tab-button>
-      <ion-tab-button tab="search"  color="danger"  routerLink="/ubicacion">
-        <ion-icon name="location-outline"></ion-icon>
-        
-        Tu Ubicacion
+      <ion-tab-button tab="search" routerLink="/ubicacion">
+        <ion-icon name="location-outline" color="danger"></ion-icon>
+       <ion-text color="danger"> Tu Ubicacion</ion-text>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
+</ion-content>
+
 

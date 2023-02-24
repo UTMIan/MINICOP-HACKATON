@@ -6,25 +6,23 @@
     <ion-title color="danger">Ubicacion</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.804723527039!2d-102.24995368460962!3d21.942057361346993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429f1701dc31605%3A0xbb03374e660a22c6!2sUniversidad%20Tecnol%C3%B3gica%20Metropolitana%20de%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1677116339160!5m2!1ses-419!2smx" width="350" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.804723527039!2d-102.24995368460962!3d21.942057361346993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429f1701dc31605%3A0xbb03374e660a22c6!2sUniversidad%20Tecnol%C3%B3gica%20Metropolitana%20de%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1677116339160!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<ion-content>
 
-    <ion-tabs>
-      <ion-router-outlet></ion-router-outlet>
-    
-      <ion-tab-bar slot="bottom"  color="danger">
-        <ion-tab-button tab="home"  color="danger" routerLink="/principal">
-          <ion-icon name="bag-add-outline"></ion-icon>
-          Emergencia
-        </ion-tab-button>
-        <ion-tab-button tab="search"  color="danger"  routerLink="/ubicacion">
-          <ion-icon name="location-outline"></ion-icon>
-          
-          Tu Ubicacion
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-
+  <ion-tabs>
+    <ion-router-outlet></ion-router-outlet>
+  
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" routerLink="/principal">
+        <ion-icon name="bag-add-outline" color="danger"></ion-icon>
+        <ion-text color="danger"> Emergencia</ion-text>
+      </ion-tab-button>
+      <ion-tab-button tab="search" routerLink="/ubicacion">
+        <ion-icon name="location-outline" color="danger"></ion-icon>
+       <ion-text color="danger"> Tu Ubicacion</ion-text>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
