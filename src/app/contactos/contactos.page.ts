@@ -15,20 +15,20 @@ export class ContactosPage implements OnInit {
   
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Alert!',
+      header: 'Contactos registrados con exito!',
       buttons: [
         {
-          text: 'Cancel',
+          text: 'Cancelar',
           role: 'cancel',
           handler: () => {
-            this.handlerMessage = 'Alert canceled';
+            this.handlerMessage = 'Contactos no registrados';
           },
         },
         {
           text: 'OK',
-          role: 'confirm',
+          role: 'Exitoso',
           handler: () => {
-            this.handlerMessage = 'Alert confirmed';
+            this.handlerMessage = 'Contactos registrados';
           },
         },
       ],
@@ -36,8 +36,6 @@ export class ContactosPage implements OnInit {
 
     await alert.present();
 
-    const { role } = await alert.onDidDismiss();
-    this.roleMessage = `Dismissed with role: ${role}`;
   }
 
   ngOnInit() {
