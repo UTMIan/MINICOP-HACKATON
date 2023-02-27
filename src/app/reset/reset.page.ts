@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.page.html',
+  selector: 'app-reset',
+  templateUrl: './reset.page.html',
   styleUrls: ['../login/login.page.scss'],
 })
-export class SignupPage implements OnInit {
+export class ResetPage implements OnInit {
 
   constructor() { }
 

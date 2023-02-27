@@ -34,9 +34,13 @@ const routes: Routes = [
   {
     path: 'contactos',
     loadChildren: () => import('./contactos/contactos.module').then( m => m.ContactosPageModule)
-  },  {
+  },
+  {
     path: 'tips',
     loadChildren: () => import('./tips/tips.module').then( m => m.TipsPageModule)
+  },  {
+    path: 'reset',
+    loadChildren: () => import('./reset/reset.module').then( m => m.ResetPageModule)
   },
 
 ];
