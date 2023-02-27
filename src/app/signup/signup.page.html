@@ -1,41 +1,51 @@
+<!-- 
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button default-href="#" routerLink="/home" color="danger"></ion-back-button>
+    <ion-buttons slot="start" >
+      <ion-back-button default-href="#" routerLink="/home"  color="danger"></ion-back-button>
     </ion-buttons>
-    <ion-title>Registro</ion-title>
+    <ion-title color="danger">Inicio de sesion</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content class="ion-padding">
-  <ion-list>
-    <ion-item>
-      <ion-label color="danger">Nombre</ion-label>
-      <ion-input placeholder="Ingresa tu nombre"></ion-input>
-    </ion-item>
+<ion-content>
+  
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Crea tu cuenta!</h1>
+      <p>Protege tu seguridad con nosotros</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </div> 
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Correo Electronico</ion-label>
+          <ion-input type="mail"></ion-input>
+        </ion-item>
+      </div>
+        <div class="form-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </div>
+      </div>
     
-    <ion-item>
-      <ion-label color="danger">Apellido</ion-label>
-      <ion-input placeholder="Ingresa tus apellidos"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label color="danger">Contraseña</ion-label>
-      <ion-input type="password" value="password"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating" color="danger">Correo Electronico</ion-label>
-      <ion-input placeholder="correo@dominio.com"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label position="floating" color="danger">Numero de Telefono</ion-label>
-      <ion-input placeholder="Ingresa tu numero celular"></ion-input>
-    </ion-item>
-  </ion-list>
-  <br>
-  <ion-button color="danger">
-    Iniciar
-  </ion-button>
+    <div class="action-buttons ion-padding">
+      <ion-button size="large" class="login-button" color="danger">Crea tu cuenta</ion-button>
+      
+      <ion-button class="signup-button" size="large" fill="outline" routerLink="/logim" color="danger">Iniciar Sesion</ion-button>
+      <p routerLink="/home">Inicio</p>
+    </div>
+    </div>
 </ion-content>
+
+ 

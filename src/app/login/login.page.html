@@ -1,29 +1,42 @@
-
+<!-- 
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start" >
       <ion-back-button default-href="#" routerLink="/home"  color="danger"></ion-back-button>
     </ion-buttons>
-    <ion-title>Inicio de sesion</ion-title>
+    <ion-title color="danger">Inicio de sesion</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content class="ion-padding">
-  <ion-item fill="solid">
-    <ion-label position="floating"  color="danger">Email</ion-label>
-    <ion-input type="email" ngModel email  color="danger"></ion-input>
-    <ion-note slot="helper">Ingresa un email valido</ion-note>
-    <ion-note slot="error"  color="danger">Email invalido</ion-note>
-  </ion-item>
-  <ion-item fill="solid">
-    <ion-label position="floating"  color="danger">Contraseña</ion-label>
-    <ion-input type="email" ngModel email  color="danger"></ion-input>
-    <ion-note slot="helper">Ingresa una contraseña valida</ion-note>
-    <ion-note slot="error"  color="danger">Contraseña invalida</ion-note>
-  </ion-item>
-<br>
-  <ion-button color="danger">
-    Iniciar
-  </ion-button>
+<ion-content>
+  
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Bienvenidos!</h1>
+      <p>Inicia sesion para continuar</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Correo Electronico</ion-label>
+          <ion-input type="mail"></ion-input>
+        </ion-item>
+      </div>
+        <div class="form-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+    
+    <div class="action-buttons ion-padding">
+      <ion-button size="large" class="login-button" color="danger" routerLink="/principal">Iniciar Sesion</ion-button>
+      <p routerLink="/reset">Olvidaste tu contraseña?</p>
+      <ion-button class="signup-button" size="large" fill="outline" routerLink="/signup" color="danger">Registrate</ion-button>
+    </div>
+    </div>
 </ion-content>
 
