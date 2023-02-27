@@ -2,3 +2,35 @@
     font-family: 'Montserrat';
   }
 
+  .panic-button {
+    --background: #dd1212;
+    --background-hover: #cc0000;
+    --color: #ffffff;
+    --box-shadow: none;
+    --border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 32px;
+    right: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    ion-icon{
+      font-size: 12em;
+    }
+  }
+  
+  .panic-button {
+    animation-timing-function: ease-in-out;
+  }
+
+
+
+
+
+
+  
+
