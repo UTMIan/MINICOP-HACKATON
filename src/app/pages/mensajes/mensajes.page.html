@@ -1,18 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button default-href="#" routerLink="/principal" color="danger"></ion-back-button>
-    </ion-buttons>
     <ion-title color="danger">Mensajes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" align="center" >
-  <P>
-    Escribe mensajes personalizados a tus constactos
-    en caso de una emergencia:
-  </P>
 
+
+      <H2>Mensajes</H2>
+      <ion-card-subtitle color="danger">Tu mejor opcion para tu seguridad</ion-card-subtitle>
+   
+      Manda mensajes a las personas que mas quieras para que sepan sobre ti.
+      <ion-img src="/assets/DIVIDER.png"></ion-img>
 
   <ion-list class="ion-padding">
     <form (ngSubmit)="registrarMensajes(forma)" #forma="ngForm">
@@ -38,7 +37,7 @@
   
 
   <h5>Mis mensajes</h5>
-  <ion-list lines="full">
+  <ion-list >
     <ion-item>
       <ion-label>Mensaje 1: {{mensaje1}}</ion-label>
     </ion-item>

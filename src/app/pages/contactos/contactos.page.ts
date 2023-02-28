@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -13,7 +14,7 @@ export class ContactosPage implements OnInit {
 
   constructor(private alertController: AlertController) { }
   
-  async presentAlert() {
+  async presentAlerts() {
     const alert = await this.alertController.create({
       header: 'Contactos registrados con exito!',
       buttons: [
@@ -38,6 +39,36 @@ export class ContactosPage implements OnInit {
 
   }
 
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Inserta la informacion de tu contacto',
+      buttons: ['OK'],
+      inputs: [
+        {
+          
+          placeholder: 'Nombre',
+        },
+        {
+          placeholder: 'Apellido',
+          attributes: {
+            maxlength: 16,
+          },
+          
+        },
+        {
+          type: 'number',
+          placeholder: 'Edad',
+          min: 1,
+          max: 100,
+        },
+      ],
+    });
+
+    await alert.present();
+  }
+
+  
   ngOnInit() {
   }
 

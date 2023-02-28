@@ -1,47 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button default-href="#" routerLink="/principal" color="danger"></ion-back-button>
+      <ion-back-button default-href="#" routerLink="/pages/principal" color="danger"></ion-back-button>
     </ion-buttons>
     <ion-title color="danger">Contactos</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
 <div id="main-content" class="ion-padding" align="center">
-  <p>
-    Escribe 3 contactos los cuales sean de mayor importancia para ti una vez registrados para tener un registro exitoso  </p>
-    
-
-  <ion-item>
-    <ion-avatar slot="start">
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
-    <ion-input color="danger">
-      
-    </ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Parentesco</ion-label><ion-toggle slot="end"></ion-toggle>
-    <ion-select placeholder="Selecciona el Parentesco">
-      <ion-select-option value="">Mamá</ion-select-option>
-      <ion-select-option value="nes">Papá</ion-select-option>
-      <ion-select-option value="n64">Hermana/Hermano</ion-select-option>
-      <ion-select-option value="n64">Otro Familiar</ion-select-option>
-      <ion-select-option value="n64">Tutor</ion-select-option>
-      <ion-select-option value="n64">Amigo</ion-select-option>
-    </ion-select>
-  </ion-item>
   
+      <H2>Tus Contactos</H2>
+      <ion-card-subtitle color="danger">Tu mejor opcion para tu seguridad</ion-card-subtitle>
+
+      Selecciona los contactos de tu confianza para avsiarles a todo momento sobre tu seguridad
+
+<ion-img src="/assets/DIVIDER.png"></ion-img>
+
+<ion-card>
   <ion-item>
     <ion-avatar slot="start">
       <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
     </ion-avatar>
-    <ion-input color="danger">
-      
-    </ion-input>
+    <ion-input type="tel" placeholder="449 *** ****"></ion-input>
+    <ion-button (click)="presentAlert()" color= danger>Registrame</ion-button>
   </ion-item>
+
   <ion-item>
-    <ion-label>Parentesco</ion-label> <ion-toggle slot="end"></ion-toggle>
+    <ion-label color="danger">Parentesco</ion-label>
     <ion-select placeholder="Selecciona el Parentesco">
       <ion-select-option value="">Mamá</ion-select-option>
       <ion-select-option value="nes">Papá</ion-select-option>
@@ -51,18 +36,39 @@
       <ion-select-option value="n64">Amigo</ion-select-option>
     </ion-select>
   </ion-item>
- 
+</ion-card>
 
+  <!-- <ion-list class="ion-padding">
+    <form (ngSubmit)="registrarMensajes(forma)" #forma="ngForm">
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input name="nombre" [ngModel]="nombre" placeholder="Ingresa el nombre"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Apellido</ion-label>
+        <ion-input name="apellido" [ngModel]="apellido" placeholder="Ingresa el apellido"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Edad</ion-label>
+        <ion-input name="edad" [ngModel]="edad" placeholder="Inrgresa la edad"></ion-input>
+      </ion-item>
+      <br>
+    </form>
+  </ion-list> -->
+
+  <ion-card>
   <ion-item>
     <ion-avatar slot="start">
       <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
     </ion-avatar>
-    <ion-input color="danger">
-      
-    </ion-input>
+    <ion-input type="tel" placeholder="449 *** ****"></ion-input>
+
+    <ion-button (click)="presentAlert()" color= danger>Registrame</ion-button>
   </ion-item>
   <ion-item>
-    <ion-label>Parentesco</ion-label><ion-toggle slot="end"></ion-toggle>
+    <ion-label color="danger">Parentesco</ion-label> 
     <ion-select placeholder="Selecciona el Parentesco">
       <ion-select-option value="">Mamá</ion-select-option>
       <ion-select-option value="nes">Papá</ion-select-option>
@@ -72,19 +78,33 @@
       <ion-select-option value="n64">Amigo</ion-select-option>
     </ion-select>
   </ion-item>
+</ion-card>
 
+<ion-card>
   <ion-item>
     <ion-avatar slot="start">
       <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
     </ion-avatar>
-    <ion-label>
-      Ambulancia
-    </ion-label>
+    <ion-input type="tel" placeholder="449 *** ****"></ion-input>
+    <ion-button (click)="presentAlert()" color= danger>Registrame</ion-button>
   </ion-item>
+  <ion-item>
+    <ion-label color="danger">Parentesco</ion-label>
+    <ion-select placeholder="Selecciona el Parentesco">
+      <ion-select-option value="">Mamá</ion-select-option>
+      <ion-select-option value="nes">Papá</ion-select-option>
+      <ion-select-option value="n64">Hermana/Hermano</ion-select-option>
+      <ion-select-option value="n64">Otro Familiar</ion-select-option>
+      <ion-select-option value="n64">Tutor</ion-select-option>
+      <ion-select-option value="n64">Amigo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-card>
 
-  <ion-button color="danger" (click)="presentAlert()"  align="center">Registrar</ion-button>
+  <ion-button color="danger" (click)="presentAlerts()"  align="center">Registrar</ion-button>
   <p>{{ handlerMessage }}</p>
   <p>{{ roleMessage }}</p>
+
   
     
 </div>
