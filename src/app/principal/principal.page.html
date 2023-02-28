@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button  color="danger"></ion-menu-button>
+      <ion-menu-button color="danger"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="primary">
       <ion-button>
@@ -14,6 +14,7 @@
     <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
+
 <!--Barra desplegable-->
 
 <ion-menu contentId="main-content" align="center">
@@ -58,6 +59,7 @@
   </ion-content>
 </ion-menu>
 
+<!-- Pagina principal -->
 <ion-content>
 <div id="main-content" class="ion-padding" align="center">
   
@@ -71,12 +73,11 @@
     </ion-card-content>
   </ion-card>
 
-      <img src="assets/Button2.png" style="width : 80% ; height : 80%" ng-click="nextpage()" >
+  <!-- BOTON DE PANICO -->
+        <ion-button class="panic_button" (click)="startAnimation()">
+          <ion-icon name="alert-outline" size="900"></ion-icon>
+        </ion-button>
 
-      <ion-button color="danger">Aprende Más</ion-button>
-
-      
-    
 </div>
 
 

@@ -2,3 +2,49 @@
     font-family: 'Montserrat';
   }
 
+  .panic_button {
+    --background: hsl(0, 85%, 47%);
+    --background-active: #6b0909;
+    --color: #ffffff;
+    --box-shadow: 0px 10px #731010;
+    --border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 32px;
+    right: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    ion-icon{
+      font-size: 12em;
+    }
+  }
+  .panic_button_pressed{
+    animation-name: changecolor;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+  }
+  @keyframes changecolor {
+
+    0%{
+      --backgorund: hsl(0, 85%, 47%);
+    }
+    
+    100% {
+      --background: #b80e0e;
+      --box-shadow: 0px 0px #731010;
+    }
+    
+  }
+
+
+
+
+
+
+
+  
+
