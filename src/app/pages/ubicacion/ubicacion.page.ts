@@ -7,32 +7,24 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./ubicacion.page.scss'],
 })
 export class UbicacionPage implements OnInit {
-
+  // Typically referenced to your ion-router-outlet
+  presentingElement = null;
   handlerMessage = '';
   roleMessage = '';
 
   constructor(private alertController: AlertController) { }
 
   ngOnInit() {
+    
   }
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Contactos registrados con exito!',
+      header: 'Ubicacion compartida con exito!',
       buttons: [
-        {
-          text: 'Cancelar',
-          role: 'cancel',
-          handler: () => {
-            this.handlerMessage = 'Contactos no registrados';
-          },
-        },
         {
           text: 'OK',
           role: 'Exitoso',
-          handler: () => {
-            this.handlerMessage = 'Contactos registrados';
-          },
         },
       ],
     });
