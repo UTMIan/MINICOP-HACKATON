@@ -16,97 +16,40 @@
 
 <ion-img src="/assets/DIVIDER.png"></ion-img>
 
-<ion-card>
+<!-- Contacto 1-->
+<ion-card align="center" *ngFor="let contacto of contactos; let index = index">
   <ion-item>
-    <ion-avatar slot="start">
+    <ion-avatar class="avatar">
       <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
     </ion-avatar>
-    <ion-input type="tel" placeholder="449 *** ****"></ion-input>
-    <ion-button (click)="presentAlert()" color= danger>Registrame</ion-button>
   </ion-item>
-
+  
+  <h5>Datos Contacto {{index+1}}</h5>
+<ion-list >
   <ion-item>
-    <ion-label color="danger">Parentesco</ion-label>
-    <ion-select placeholder="Selecciona el Parentesco">
-      <ion-select-option value="">Mamá</ion-select-option>
-      <ion-select-option value="nes">Papá</ion-select-option>
-      <ion-select-option value="n64">Hermana/Hermano</ion-select-option>
-      <ion-select-option value="n64">Otro Familiar</ion-select-option>
-      <ion-select-option value="n64">Tutor</ion-select-option>
-      <ion-select-option value="n64">Amigo</ion-select-option>
-    </ion-select>
+    <ion-input name="nombrecompleto" [(ngModel)]="contacto.nombrecompleto">Nombre Completo:</ion-input>
   </ion-item>
+  <ion-item>
+    <ion-input  type="number" name="telefono" [(ngModel)]="contacto.telefono">Telefono:</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input  type="number" name="edad" [(ngModel)]="contacto.edad">Edad:</ion-input>
+  </ion-item>
+</ion-list>
+<ion-item>
+  <ion-label color="danger">Parentesco</ion-label>
+  <ion-select placeholder="Selecciona el Parentesco">
+    <ion-select-option value="">Mamá</ion-select-option>
+    <ion-select-option value="nes">Papá</ion-select-option>
+    <ion-select-option value="n64">Hermana/Hermano</ion-select-option>
+    <ion-select-option value="n64">Otro Familiar</ion-select-option>
+    <ion-select-option value="n64">Tutor</ion-select-option>
+    <ion-select-option value="n64">Amigo</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-button color="danger" (click)="registrarContacto(index)">Registrame</ion-button>
 </ion-card>
 
-  <!-- <ion-list class="ion-padding">
-    <form (ngSubmit)="registrarMensajes(forma)" #forma="ngForm">
-      <ion-item>
-        <ion-label position="stacked">Nombre</ion-label>
-        <ion-input name="nombre" [ngModel]="nombre" placeholder="Ingresa el nombre"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label position="stacked">Apellido</ion-label>
-        <ion-input name="apellido" [ngModel]="apellido" placeholder="Ingresa el apellido"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label position="stacked">Edad</ion-label>
-        <ion-input name="edad" [ngModel]="edad" placeholder="Inrgresa la edad"></ion-input>
-      </ion-item>
-      <br>
-    </form>
-  </ion-list> -->
-
-  <ion-card>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
-    <ion-input type="tel" placeholder="449 *** ****"></ion-input>
-
-    <ion-button (click)="presentAlert()" color= danger>Registrame</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-label color="danger">Parentesco</ion-label> 
-    <ion-select placeholder="Selecciona el Parentesco">
-      <ion-select-option value="">Mamá</ion-select-option>
-      <ion-select-option value="nes">Papá</ion-select-option>
-      <ion-select-option value="n64">Hermana/Hermano</ion-select-option>
-      <ion-select-option value="n64">Otro Familiar</ion-select-option>
-      <ion-select-option value="n64">Tutor</ion-select-option>
-      <ion-select-option value="n64">Amigo</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-card>
-
-<ion-card>
-  <ion-item>
-    <ion-avatar slot="start">
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
-    <ion-input type="tel" placeholder="449 *** ****"></ion-input>
-    <ion-button (click)="presentAlert()" color= danger>Registrame</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-label color="danger">Parentesco</ion-label>
-    <ion-select placeholder="Selecciona el Parentesco">
-      <ion-select-option value="">Mamá</ion-select-option>
-      <ion-select-option value="nes">Papá</ion-select-option>
-      <ion-select-option value="n64">Hermana/Hermano</ion-select-option>
-      <ion-select-option value="n64">Otro Familiar</ion-select-option>
-      <ion-select-option value="n64">Tutor</ion-select-option>
-      <ion-select-option value="n64">Amigo</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-card>
-
-  <ion-button color="danger" (click)="presentAlerts()"  align="center">Registrar</ion-button>
-  <p>{{ handlerMessage }}</p>
-  <p>{{ roleMessage }}</p>
-
-  
-    
 </div>
   
 </ion-content>

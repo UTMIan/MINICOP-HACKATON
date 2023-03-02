@@ -16,7 +16,7 @@ export class AppComponent {
     this.db.object("contactos").set(true);
 
    
-    this.db.list("contactos").push({nombre: "EJEMPLO", apellido:"EJE", edad:19, numero:"7272727"})
+    this.db.list("contactos").push({nombre: "EJEMPLO", apellido:"EJE", edad:19, numero:"number"})
 
     //DETECTAR CAMBIOS DE VARIABLE 
           this.db.object("alerta").valueChanges().subscribe(data=>{
@@ -24,8 +24,12 @@ export class AppComponent {
     })
   }
           
-  registrarContacto(){
-    this.db.list("contactos").push({nombre: "EJEMPLO", apellido:"EJE", edad:19, numero:"7272727"})
-  }
+  // registrarContacto(){
+  //   this.db.list("contactos").push({nombre: "EJEMPLO", apellido:"EJE", edad:19, numero:"number"})
+  // }
+
+  // actualizarBoton(){
+
+  // }
 
 }

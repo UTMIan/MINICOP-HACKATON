@@ -1,75 +1,70 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-contactos',
   templateUrl: './contactos.page.html',
   styleUrls: ['./contactos.page.scss'],
 })
-export class ContactosPage implements OnInit {
+export class ContactosPage{
 
+  nameC1 = '';
   handlerMessage = '';
   roleMessage = '';
 
-  constructor(private alertController: AlertController) { }
-  
-  async presentAlerts() {
-    const alert = await this.alertController.create({
-      header: 'Contactos registrados con exito!',
-      buttons: [
-        {
-          text: 'Cancelar',
-          role: 'cancel',
-          handler: () => {
-            this.handlerMessage = 'Contactos no registrados';
-          },
-        },
-        {
-          text: 'OK',
-          role: 'Exitoso',
-          handler: () => {
-            this.handlerMessage = 'Contactos registrados';
-          },
-        },
-      ],
-    });
+  contactos = [
+    {nombrecompleto:"", telefono:"", edad:""}, 
+    {nombrecompleto:"", telefono:"", edad:""}, 
+    {nombrecompleto:"", telefono:"", edad:""}
+  ];
 
-    await alert.present();
+  constructor(private toastController : ToastController, private db:AngularFireDatabase) { 
+  }
+    //FUNCIONES REGISTRAR CONTACTOS FIREBASE
+
+    registrarContacto(index:number){
+      this.db.object(`contacto${index+1}`).set(this.contactos[index])
+    }
+  
+    ngOnInit(){
+
+         //DETECTAR CAMBIOS DE VARIABLE 
+      for (const [i, v]  of this.contactos.entries()) {
+      this.db.object(`contacto${i+1}`).valueChanges().subscribe((contacto: any)=>{
+        if(!!contacto){
+          this.contactos[i]=contacto;
+        }
+        });
+      }
+    }
+  
+   async presentToast(position: 'bottom') {
+     const toast = await this.toastController.create({
+       message: 'Mensajes guardados',
+       duration: 2000,
+       position: position,
+  });
+
+  await toast.present();
+   }
+  
+
+  async presentAlertC2() {
 
   }
 
+  async presentAlertC3() {
 
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Inserta la informacion de tu contacto',
-      buttons: ['OK'],
-      inputs: [
-        {
-          
-          placeholder: 'Nombre',
-        },
-        {
-          placeholder: 'Apellido',
-          attributes: {
-            maxlength: 16,
-          },
-          
-        },
-        {
-          type: 'number',
-          placeholder: 'Edad',
-          min: 1,
-          max: 100,
-        },
-      ],
-    });
-
-    await alert.present();
   }
 
   
-  ngOnInit() {
-  }
+
+ 
+
+
 
 }
