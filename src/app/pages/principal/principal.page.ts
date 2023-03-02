@@ -53,10 +53,6 @@ export class PrincipalPage {
     this.db.object("alarma").set(!this.alarma);
   }
 
-  emergenciaLlamada(){
-    
-  }
-
   //LEE LA VARIABLA YA DECLARABLE ALARMA
   ngOnInit(){
   this.db.object("alarma").valueChanges().subscribe((alarma:any)=>{

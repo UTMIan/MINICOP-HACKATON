@@ -17,39 +17,26 @@
       <ion-img src="/assets/DIVIDER.png"></ion-img>
 
   <ion-list class="ion-padding">
-    <form (ngSubmit)="registrarMensajes(forma)" #forma="ngForm">
+    <form (ngSubmit)="registrarMensajes()" #forma="ngForm">
       <ion-item>
         <ion-label position="stacked">Mensaje numero 1</ion-label>
-        <ion-input name="mensaje1" [ngModel]="mensaje1" placeholder="¡Necesito tu ayuda!"></ion-input>
+        <ion-input name="mensaje1" [(ngModel)]="mensaje1" placeholder="¡Necesito tu ayuda!"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label position="stacked">Mensaje numero 2</ion-label>
-        <ion-input name="mensaje2" [ngModel]="mensaje2" placeholder="¡Contacta a mis familiares!"></ion-input>
+        <ion-input name="mensaje2" [(ngModel)]="mensaje2" ></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label position="stacked">Mensaje numero 3</ion-label>
-        <ion-input name="mensaje3" [ngModel]="mensaje3" placeholder="¡Llama al 911!"></ion-input>
+        <ion-input name="mensaje3" [(ngModel)]="mensaje3" placeholder="¡Llama al 911!"></ion-input>
       </ion-item>
       <br>
-      <ion-button type="submit" expand="block" color="danger" (click)="presentToast('bottom')">Guardar</ion-button>
+      <ion-button type="submit" expand="block" color="danger" (click)="presentToast('bottom')">ENVIAR SMS</ion-button>
       
     </form>
   </ion-list>
   
-
-  <h5>Mis mensajes</h5>
-  <ion-list >
-    <ion-item>
-      <ion-label>Mensaje 1: {{mensaje1}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mensaje 2: {{mensaje2}}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mensaje 3: {{mensaje3}}</ion-label>
-    </ion-item>
-  </ion-list>
 </ion-content>
 

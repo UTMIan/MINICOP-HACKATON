@@ -16,7 +16,6 @@
 
 <ion-img src="/assets/DIVIDER.png"></ion-img>
 
-<!-- Contacto 1-->
 <ion-card align="center" *ngFor="let contacto of contactos; let index = index">
   <ion-item>
     <ion-avatar class="avatar">
@@ -30,7 +29,7 @@
     <ion-input name="nombrecompleto" [(ngModel)]="contacto.nombrecompleto">Nombre Completo:</ion-input>
   </ion-item>
   <ion-item>
-    <ion-input  type="number" name="telefono" [(ngModel)]="contacto.telefono">Telefono:</ion-input>
+    <ion-input name="telefono" [(ngModel)]="contacto.telefono">Telefono:</ion-input>
   </ion-item>
   <ion-item>
     <ion-input  type="number" name="edad" [(ngModel)]="contacto.edad">Edad:</ion-input>

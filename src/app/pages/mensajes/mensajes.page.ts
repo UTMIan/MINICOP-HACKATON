@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAction, AngularFireDatabase } from '@angular/fire/compat/database';
 import { NgForm } from '@angular/forms';
+
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -8,25 +10,36 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./mensajes.page.scss'],
 })
 export class MensajesPage{
-  mensaje1 = '';
-  mensaje2 = '';
-  mensaje3 = '';
+mensaje1 = "MAMAAAA";
+mensaje2 = "LA QUIERO DE VUELTA";
+mensaje3 = "PORFAAAAVORRR";
 
-  constructor(private toastController: ToastController) {
-   
+  constructor(private toastController: ToastController, private db:AngularFireDatabase) {
+   this.db.object("mensaje1").set("");
+   this.db.object("mensaje2").set("");
+   this.db.object("mensaje3").set("");
   }
   
-  registrarMensajes(forma: NgForm) {
-    console.log(forma.value)
-    this.mensaje1 = forma.value.mensaje1;
-    this.mensaje2 = forma.value.mensaje2;
-    this.mensaje3 = forma.value.mensaje3;
-   
-  }
+  registrarMensajes() {
+    this.db.list("mensaje1").push(this.mensaje1);
+    this.db.list("mensaje2").push(this.mensaje2);
+    this.db.list("mensaje3").push(this.mensaje3);
+    
+
+    this.db.object("mensaje1").valueChanges().subscribe(data=>{
+      console.log(data);
+      });
+    this.db.object("mensaje2").valueChanges().subscribe(data=>{
+      console.log(data);
+      });
+    this.db.object("mensaje3").valueChanges().subscribe(data=>{
+      console.log(data);
+      });
+}
 
   async presentToast(position: 'bottom') {
     const toast = await this.toastController.create({
-      message: 'Mensajes guardados',
+      message: 'Mensajes enviadonexito',
       duration: 2000,
       position: position,
       

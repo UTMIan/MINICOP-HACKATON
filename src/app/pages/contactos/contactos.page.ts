@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { NgForm } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 
@@ -11,10 +9,6 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./contactos.page.scss'],
 })
 export class ContactosPage{
-
-  nameC1 = '';
-  handlerMessage = '';
-  roleMessage = '';
 
   contactos = [
     {nombrecompleto:"", telefono:"", edad:""}, 
