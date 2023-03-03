@@ -46,14 +46,4 @@ export class ContactosPage{
 
   await toast.present();
    }
-  
-
-  async presentAlertC2() {
-
-  }
-
-  async presentAlertC3() {
-
-  }
-
 }

@@ -3,15 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button color="danger"></ion-menu-button>
     </ion-buttons>
-    <ion-buttons slot="primary">
-      <ion-button>
-        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical" color="danger"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-button  color="danger" routerLink="/home">
+        Salir
       </ion-button>
     </ion-buttons>
     <ion-title color="danger">MiniCop App</ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -28,27 +25,28 @@
       
 
   <!-- BOTON DE PANICO -->
-        <ion-button class="panic_button" (click)="startAnimation()" (click)=" actualizarBoton()">
+        <ion-button class="panic_button" (click)=" actualizarBoton()">
           <ion-icon name="alert-outline" size="900"></ion-icon>
         </ion-button>
         <br>
+
         <ion-card>
-        <ion-list>
-          <ion-item>
-            <ion-label><ion-icon color="danger" name="alert-circle-outline"></ion-icon> Selecciona el tipo de emergencia:</ion-label>
+          <ion-card-header>
+            <ion-card-title> Emergencia</ion-card-title>
+            <ion-icon color="danger" name="alert-circle-outline"></ion-icon>
+            <ion-card-subtitle color="danger">Selecciona el tipo de emergencia</ion-card-subtitle>
+          </ion-card-header>
+
+<!--SELECCION TIPO DE EMERGENCIA-->
+          <ion-card-content>
             <ion-select interface="action-sheet" placeholder="Emergencia:" cancelText="Cancelar">
-              <ion-select-option value="incendio">Incendio</ion-select-option>
-              <ion-select-option value="robocasa">Robo Casa-Habitacion</ion-select-option>
-              <ion-select-option value="hogar">Accidente de Hogar</ion-select-option>
-              <ion-select-option value="extorsion">Extorsion</ion-select-option>
+              <ion-select-option>Incendio</ion-select-option>
+              <ion-select-option>Robo Casa-Habitacion</ion-select-option>
+              <ion-select-option>Accidente de Hogar</ion-select-option>
+              <ion-select-option>Extorsion</ion-select-option>
             </ion-select>
-          </ion-item>
-        </ion-list>
-
-        <ion-button color="danger">Continuar</ion-button>
-
-      </ion-card>
-
+          </ion-card-content>
+        </ion-card>
 
 </ion-content>
 

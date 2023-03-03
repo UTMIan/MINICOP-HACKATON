@@ -10,9 +10,9 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./mensajes.page.scss'],
 })
 export class MensajesPage{
-mensaje1 = "MAMAAAA";
-mensaje2 = "LA QUIERO DE VUELTA";
-mensaje3 = "PORFAAAAVORRR";
+mensaje1 = "Ayuda";
+mensaje2 = "Pide ayuda";
+mensaje3 = "Estoy en...";
 
   constructor(private toastController: ToastController, private db:AngularFireDatabase) {
    this.db.object("mensaje1").set("");
