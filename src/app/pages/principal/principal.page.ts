@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { delay } from 'rxjs';
 
 
 @Component({
@@ -48,6 +49,22 @@ export class PrincipalPage {
   // }
   }
 
+  emergenciaIncendio(){
+
+  }
+
+  emregenciaRobocasa(){
+    
+  }
+
+  emregenciaHogar(){
+    
+  }
+
+  emregenciaExtorsion(){
+    
+  }
+
   //PERMITE CAMBIAR EL VALOR DE ALARMA SI ES FALSO PASA A VERDADERO O VICEVERSA CON !
   actualizarBoton(){
     this.db.object("alarma").set(!this.alarma);
@@ -56,6 +73,7 @@ export class PrincipalPage {
   //LEE LA VARIABLA YA DECLARABLE ALARMA
   ngOnInit(){
   this.db.object("alarma").valueChanges().subscribe((alarma:any)=>{
+    
     console.log(alarma);
     this.alarma = alarma;
     

@@ -20,32 +20,102 @@
         <ion-icon name="person-outline"></ion-icon>
         <ion-item>
           <ion-label position="floating">Nombre</ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="usuario.nombreUser"></ion-input>
         </ion-item>
       </div> 
+      
       <div class="form-input">
-        <ion-icon name="mail-outline"></ion-icon>
+        <ion-icon name="calendar-number-outline"></ion-icon>
         <ion-item>
-          <ion-label position="floating">Correo Electronico</ion-label>
-          <ion-input type="mail"></ion-input>
+          <ion-label position="floating">Edad</ion-label>
+          <ion-input name="edaduser" [(ngModel)]="usuario.edadUser"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="form-input">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Numero de Telefono</ion-label>
+          <ion-input type="mail" [(ngModel)]="usuario.telefonoUser"></ion-input>
         </ion-item>
       </div>
         <div class="form-input">
           <ion-icon name="lock-closed-outline"></ion-icon>
           <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)]="usuario.userPass"></ion-input>
           </ion-item>
         </div>
       </div>
     
     <div class="action-buttons ion-padding">
-      <ion-button size="large" class="login-button" color="danger">Crea tu cuenta</ion-button>
+      <ion-button size="large" class="login-button" color="danger" (click)="registrarUsuario()">Crea tu cuenta</ion-button>
+      
+      <ion-button class="signup-button" size="large" fill="outline" routerLink="/login" color="danger">Iniciar Sesion</ion-button>
+      <p routerLink="/home">Inicio</p>
+    </div>
+    </div>
+</ion-content>
+
+
+
+
+
+<!-- 
+
+<ion-content>
+  
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Crea tu cuenta!</h1>
+      <p>Protege tu seguridad con nosotros</p>
+    </div>
+    <div class="login-form ion-padding">
+
+
+      <div class="form-input">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input name="nombreuser" [(ngModel)]="nombreUser"></ion-input>
+        </ion-item>
+      </div> 
+
+
+      <div class="form-input">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">Edad</ion-label>
+          <ion-input name="edaduser" [(ngModel)]="edadUser" ></ion-input>
+        </ion-item>
+      </div>
+
+
+      <div class="form-input">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-item>
+          <ion-label name="telefonouser" position="floating" [(ngModel)]="telefonoUser">Numero telefonico</ion-label>
+          <ion-input ></ion-input>
+        </ion-item>
+      </div>
+
+
+        <div class="form-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input name="userpass" type="password" [(ngModel)]="userPass"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+    
+    <div class="action-buttons ion-padding">
+      <ion-button size="large" class="login-button" color="danger" (click)="registrarUsuario()">Crea tu cuenta</ion-button>
       
       <ion-button class="signup-button" size="large" fill="outline" routerLink="/logim" color="danger">Iniciar Sesion</ion-button>
       <p routerLink="/home">Inicio</p>
     </div>
     </div>
-</ion-content>
+</ion-content> -->
 
  

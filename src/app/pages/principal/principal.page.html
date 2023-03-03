@@ -14,10 +14,8 @@
     <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<!--Barra desplegable-->
 
 <!-- Pagina principal -->
-
 <ion-content id="main-content" class="ion-padding" align="center">
 
       <ion-card-title id="card" >Boton de Panico</ion-card-title>
@@ -34,10 +32,24 @@
           <ion-icon name="alert-outline" size="900"></ion-icon>
         </ion-button>
         <br>
-        <ion-button shape="round" color="danger" href="https://www.youtube.com/watch?v=LEEWO4_RI6I">Aprender Mas</ion-button>
+        <ion-card>
+        <ion-list>
+          <ion-item>
+            <ion-label><ion-icon color="danger" name="alert-circle-outline"></ion-icon> Selecciona el tipo de emergencia:</ion-label>
+            <ion-select interface="action-sheet" placeholder="Emergencia:" cancelText="Cancelar">
+              <ion-select-option value="incendio">Incendio</ion-select-option>
+              <ion-select-option value="robocasa">Robo Casa-Habitacion</ion-select-option>
+              <ion-select-option value="hogar">Accidente de Hogar</ion-select-option>
+              <ion-select-option value="extorsion">Extorsion</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
 
-  
-        
+        <ion-button color="danger">Continuar</ion-button>
+
+      </ion-card>
+
+
 </ion-content>
 
 

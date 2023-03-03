@@ -13,6 +13,7 @@ export class ContactosPage{
   contactos = [
     {nombrecompleto:"", telefono:"", edad:""}, 
     {nombrecompleto:"", telefono:"", edad:""}, 
+    {nombrecompleto:"", telefono:"", edad:""},
     {nombrecompleto:"", telefono:"", edad:""}
   ];
 
@@ -54,11 +55,5 @@ export class ContactosPage{
   async presentAlertC3() {
 
   }
-
-  
-
- 
-
-
 
 }

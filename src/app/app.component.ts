@@ -12,16 +12,15 @@ export class AppComponent {
   
   constructor(private db:AngularFireDatabase) {
     //MODIFICAR VALORES DEVARIABLE CON SU VALOR 
-    this.db.object("alerta").set(true);
     this.db.object("contactos").set(true);
 
    
     this.db.list("contactos").push({nombre: "EJEMPLO", apellido:"EJE", edad:19, numero:"number"})
 
     //DETECTAR CAMBIOS DE VARIABLE 
-          this.db.object("alerta").valueChanges().subscribe(data=>{
-          console.log(data);  
-    })
+    //       this.db.object("alarma").valueChanges().subscribe(data=>{
+    //       console.log(data);  
+    // })
   }
           
   // registrarContacto(){
