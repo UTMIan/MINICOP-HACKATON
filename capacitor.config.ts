@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.minicop.hackaton',
   appName: 'minicop-Hackaton',
   webDir: 'www',
   bundledWebRuntime: false
