@@ -46,7 +46,17 @@ export class PrincipalPage {
     
   })
   }
-
+  
+  //import { CallNumber } from '@ionic-native/call-number';
+ 
+  //constructor(private callNumber: CallNumber){}
+   
+  //callNumber(phoneNumber: number ){
+    //  this.callNumber.callNumber(phoneNumber, true)
+      //.then(() => console.log('Llamada exitosa!'))
+     // .catch(() => console.log('Error al intentar llamar'));
+   
+  //}
 
 }
 

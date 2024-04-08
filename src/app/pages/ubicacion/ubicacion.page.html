@@ -1,17 +1,17 @@
 <ion-header>
   <ion-toolbar>
 
-    <ion-title color="danger">Ubicación</ion-title>
+    <ion-title color="primary">Ubicación</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" id="main-content" align="center">
 
   <H2>Tu Ubicación</H2>
-  <ion-card-subtitle color="danger">Comparte en donde estas</ion-card-subtitle>
+  <ion-card-subtitle color="secondary">Comparte en donde estas</ion-card-subtitle>
 
   <p>Esta opcion compartirá tu ubicación actual a tus contactos guardados</p>
-  <ion-button color="danger" (click)="presentAlert()"  align="center">Compartir</ion-button>
+  <ion-button color="primary" (click)="presentAlert()"  align="center">Compartir</ion-button>
   <p>{{ handlerMessage }}</p>
   <p>{{ roleMessage }}</p>
 
@@ -23,9 +23,9 @@
 
 <br>
 
-<ion-card-subtitle color="danger">Visualiza tus contactos a quienes compartiste tu ubicacion</ion-card-subtitle>
+<ion-card-subtitle color="secondary">Visualiza tus contactos a quienes compartiste tu ubicacion</ion-card-subtitle>
 
-<ion-button id="open-modal" expand="block" color="danger">Contactos compartidos</ion-button>
+<ion-button id="open-modal" expand="block" color="prmiary">Contactos compartidos</ion-button>
 
 <ion-modal #modal trigger="open-modal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
   <ng-template>

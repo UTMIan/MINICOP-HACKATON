@@ -1,56 +1,56 @@
 <ion-menu contentId="main-content" align="center">
 
   <ion-header>
-    <ion-toolbar color="danger">
+    <ion-toolbar color="Primary">
       <ion-title>Acciones</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle color="danger">Mensajes Instantáneos</ion-card-subtitle>
+        <ion-card-subtitle color="Primary">Mensajes Instantáneos</ion-card-subtitle>
         <ion-card-title>Mensajes</ion-card-title>        
       </ion-card-header>
-      <ion-item routerLink="/pages/mensajes"><ion-icon name="mail-outline" color="danger"></ion-icon>
+      <ion-item routerLink="/pages/mensajes"><ion-icon name="mail-outline" color="secondary"></ion-icon>
       </ion-item>
     </ion-card>
 
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle color="danger">Alerta a tus contactos</ion-card-subtitle>
+        <ion-card-subtitle color="primary">Alerta a tus contactos</ion-card-subtitle>
         <ion-card-title>Contactos</ion-card-title>
       </ion-card-header>
-      <ion-item routerLink="/pages/contactos"><ion-icon name="people-circle-outline" color="danger"></ion-icon>
+      <ion-item routerLink="/pages/contactos"><ion-icon name="people-circle-outline" color="secondary"></ion-icon>
       </ion-item>
     </ion-card>
 
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle color="danger">Para fines estadísticos</ion-card-subtitle>
+        <ion-card-subtitle color="primary">Para fines estadísticos</ion-card-subtitle>
         <ion-card-title>Registro</ion-card-title>
       </ion-card-header>
-        <ion-item routerLink="/home"><ion-icon name="person-add-outline" color="danger"></ion-icon>
+        <ion-item routerLink="/home"><ion-icon name="person-add-outline" color="secondary"></ion-icon>
         </ion-item>
     </ion-card>
   
       <ion-menu-toggle>
-        <ion-button color="danger">Cerrar</ion-button>
+        <ion-button color="primary">Cerrar</ion-button>
       </ion-menu-toggle>
   </ion-content>
 </ion-menu>
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home" routerLink="/pages/principal">
-      <ion-icon name="bag-add-outline" color="danger"></ion-icon>
-      <ion-text color="danger"> Emergencia</ion-text>
+      <ion-icon name="bag-add-outline" color="primary"></ion-icon>
+      <ion-text color="secondary"> Emergencia</ion-text>
     </ion-tab-button>
     <ion-tab-button tab="search" routerLink="/pages/ubicacion">
-      <ion-icon name="location-outline" color="danger"></ion-icon>
-     <ion-text color="danger"> Tu Ubicación</ion-text>
+      <ion-icon name="location-outline" color="primary"></ion-icon>
+     <ion-text color="secondary"> Tu Ubicación</ion-text>
     </ion-tab-button>
     <ion-tab-button tab="search" routerLink="/pages/tips">
-      <ion-icon name="heart-outline" color="danger"></ion-icon>
-      <ion-text color="danger"> Tips</ion-text>
+      <ion-icon name="heart-outline" color="primary"></ion-icon>
+      <ion-text color="secondary"> Tips</ion-text>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

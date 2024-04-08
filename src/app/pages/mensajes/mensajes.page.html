@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button default-href="#" routerLink="/pages/principal" color="danger"></ion-back-button>
+      <ion-back-button default-href="#" routerLink="/pages/principal" color="secondary"></ion-back-button>
     </ion-buttons>
-    <ion-title color="danger">Mensajes</ion-title>
+    <ion-title color="primary">Mensajes</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +11,7 @@
 
 
       <H2>Mensajes</H2>
-      <ion-card-subtitle color="danger">Para una acción más eficaz</ion-card-subtitle>
+      <ion-card-subtitle color="secondary">Para una acción más eficaz</ion-card-subtitle>
    
       Guarda mensajes que puedas usar en diferentes situaciones de riesgo y enviar a tus contactos o autoridades
       <ion-img src="/assets/DIVIDER.png"></ion-img>
@@ -33,7 +33,7 @@
         <ion-input name="mensaje3" [(ngModel)]="mensaje3" placeholder="¡Llama al 911!"></ion-input>
       </ion-item>
       <br>
-      <ion-button type="submit" expand="block" color="danger" (click)="presentToast('bottom')">ENVIAR SMS</ion-button>
+      <ion-button type="submit" expand="block" color="primary" (click)="presentToast('bottom')">ENVIAR SMS</ion-button>
       
     </form>
   </ion-list>

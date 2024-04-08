@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { CommonModule } from '@angular/common';
+//import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,3 +23,6 @@ import { CommonModule } from '@angular/common';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+
+//providers: [CallNumber]
